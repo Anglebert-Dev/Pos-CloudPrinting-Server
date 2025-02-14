@@ -33,7 +33,7 @@ async function setupRoutes(req, res) {
         result = await getPrinterInfo(req, res);
         if (result.status === 200) {
             res.writeHead(200, { 'Content-Type': 'text/html' });
-            res.end(renderPrinterInfo(result.data.printers, new Date()));
+            res.end(renderPrinterInfo(result.data, new Date()));
             return;
         }
     } else {

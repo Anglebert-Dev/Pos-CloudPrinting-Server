@@ -114,10 +114,10 @@ class PrinterService {
   }
 
   async init() {
-    console.log("Initializing printer service...");
+    // console.log("Initializing printer service...");
     const printers = await this.getPrinters();
     this.updateCache(printers);
-    console.log("Printers loaded:", this.printerCache.data);
+    // console.log("Printers loaded:", this.printerCache.data);
   }
 
   updateCache(printers) {
